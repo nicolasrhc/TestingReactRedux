@@ -1,5 +1,11 @@
+import * as actions from './solicitudes'
+import * as types from './solicitudes'
+
 describe(" Solicitudes Action", () => {
     it("SAMPLE", () => {
-        expect(1).toBe(1);
+        const expectedAction = {
+            type: types.ACTION_SOLICITUDES
+        }
+        expect(actions.actionSolicitudes()).toEqual(expectedAction);
     })
 });
