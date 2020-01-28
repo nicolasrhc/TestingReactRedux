@@ -6,6 +6,11 @@ export interface Dato {
 }
 
 class ComponentController {
+
+    static obtenerNuevoId (): number {
+        return Math.random();
+    }
+
     public obtenerDatosServidor (): Promise<Dato[]> {
         return new Promise(resolve => (
             resolve([

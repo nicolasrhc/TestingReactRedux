@@ -1,4 +1,5 @@
 import {ACTION_SOLICITUDES} from "../actions/solicitudes";
+import ComponentController from "../classes/ComponentController";
 
 export interface Solicitud {
     id: number;
@@ -17,7 +18,7 @@ const initialState: SolicitudesReducer = {
     editable: false,
 };
 
-const solicitudes = (state = initialState, action: { type: string, payload: Record<string, any> }): SolicitudesReducer => {
+const solicitudes = (state = initialState, action: { type: string, payload?: Record<string, any> }): SolicitudesReducer => {
     const { type } = action;
     switch (type) {
         case ACTION_SOLICITUDES: {
@@ -26,7 +27,7 @@ const solicitudes = (state = initialState, action: { type: string, payload: Reco
                 cargadas: [
                     ...state.cargadas,
                     {
-                        id: Math.random(),
+                        id: ComponentController.obtenerNuevoId(),
                         bloqueada: false,
                         colaboradorId: 1,
                         productoId: 1,
