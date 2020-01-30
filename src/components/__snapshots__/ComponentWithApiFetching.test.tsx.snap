@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComponentWithApiFetching Test Debe renderizarse correctamente 1`] = `
+<div>
+  <ul>
+    <li
+      key="1"
+    >
+      _A
+      , 
+      A
+       / 
+      Wed Jan 29 2020
+    </li>
+    <li
+      key="2"
+    >
+      _B
+      , 
+      B
+       / 
+      Wed Jan 29 2020
+    </li>
+    <li
+      key="3"
+    >
+      _C
+      , 
+      C
+       / 
+      Wed Jan 29 2020
+    </li>
+  </ul>
+</div>
+`;
