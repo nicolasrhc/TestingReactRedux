@@ -1,17 +1,6 @@
 import {ACTION_SOLICITUDES} from "../actions/solicitudes";
 import ComponentController from "../classes/ComponentController";
-
-export interface Solicitud {
-    id: number;
-    productoId: number;
-    colaboradorId: number;
-    bloqueada: boolean;
-}
-
-export interface SolicitudesReducer {
-    cargadas: Solicitud[],
-    editable: boolean,
-}
+import SolicitudesReducer from "../interfaces/SolicitudesReducer";
 
 const initialState: SolicitudesReducer = {
     cargadas: [],

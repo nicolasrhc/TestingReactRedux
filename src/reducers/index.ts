@@ -1,9 +1,5 @@
-import solicitudes, {SolicitudesReducer} from "./solicitudes";
+import solicitudes from "./solicitudes";
 import { combineReducers } from "redux";
-
-export interface Store {
-    solicitudes: SolicitudesReducer;
-}
 
 const rootReducer = combineReducers({
     solicitudes,

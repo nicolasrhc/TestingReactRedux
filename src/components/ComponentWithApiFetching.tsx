@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import ComponentController, {Dato} from "../classes/ComponentController";
+import ComponentController from "../classes/ComponentController";
+import Dato from '../interfaces/Dato'
 
 interface ComponentWithApiFetchingState {
     datos: Dato[];
@@ -23,6 +24,7 @@ class ComponentWithApiFetching extends Component<ComponentWithApiFetchingProps, 
 
         try {
             const datos = await componentController.obtenerDatosServidor();
+            
             this.setState({ datos });
         } catch (e) {
             console.error(e);

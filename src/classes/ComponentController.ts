@@ -1,9 +1,4 @@
-export interface Dato {
-    id: number;
-    nombre: string;
-    apellido: string;
-    fecha: Date;
-}
+import Dato from "../interfaces/Dato";
 
 class ComponentController {
 

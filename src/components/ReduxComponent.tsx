@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {Solicitud} from "../reducers/solicitudes";
-import {Store} from "../reducers";
 import {actionSolicitudes} from "../actions/solicitudes";
+import Solicitud from "../interfaces/Solicitud";
+import Store from "../interfaces/Store";
 
 interface ReduxComponentState {
 
@@ -14,7 +14,7 @@ interface ReduxComponentProps {
     actionSolicitudes: () => void;
 };
 
-class ReduxComponent extends Component<ReduxComponentProps, ReduxComponentState> {
+export class ReduxComponent extends Component<ReduxComponentProps, ReduxComponentState> {
     static defaultProps: Partial<ReduxComponentProps> = {};
 
     constructor(props: Readonly<ReduxComponentProps>) {
